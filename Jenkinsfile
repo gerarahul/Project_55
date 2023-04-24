@@ -41,7 +41,7 @@ pipeline{
                         CurrentBuild.result = "UNSTABLE"
                     }
                     if(apply){
-                        sh "kubectl apply -f eks_tf_files/."
+                        sh "kubectl apply -f K8s_files/."
                         echo "Deployed on Eks cluster"
                     }
                 }
@@ -61,7 +61,7 @@ pipeline{
                         CurrentBuild.result = "UNSTABLE"
                     }
                     if(destroy){
-                        sh "kubectl delete -f eks_tf_files/."
+                        sh "kubectl delete -f K8s_files/."
                         echo "Deployments is deleted or destroyed"
                     }
                 }
