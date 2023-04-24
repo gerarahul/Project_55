@@ -1,7 +1,7 @@
 pipeline{
     agent any 
     parameters {
-        choice(name: 'action', choices: 'create\ndestroy\ndestroyekscluster', description: 'create/update or destroy eks cluster')
+        choice(name: 'action', choices: 'create\ndestroy', description: 'create/update or destroy eks cluster')
         string(name: 'cluster', defaultValue: 'Project_55-cluster', description: 'Eks cluster name')
         string(name: 'region', defaultValue: 'us-east-1', description: 'Eks cluster region')
     }
