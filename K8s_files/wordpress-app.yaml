@@ -42,9 +42,7 @@ spec:
           value: SECURE_AUTH_SALT
         - name: WORDPRESS_LOGGED_IN_SALT
           value: SECURE_LOGGED_IN_SALT
-        ports:
-        - containerPort: 80
-          name: phpmyadmin
+
 
 
 ---
