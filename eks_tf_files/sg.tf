@@ -18,7 +18,7 @@ resource "aws_security_group" "dynamic_sg" {
       from_port   = port.value
       to_port     = port.value
       protocol    = "tcp"
-      cidr_blocks = ["0.0.0.0/0"] // [var.vpc_cidr_block] --> you can also use this to allow limited inbound traffic 
+      cidr_blocks = ["0.0.0.0/0"] // [aws_vpc.this.cidr_block] --> you can also use this to allow limited inbound traffic 
     }
   }
   egress {
